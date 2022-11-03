@@ -14,24 +14,4 @@ export class AppController {
   getTest(): string {
     return this.appService.getTest();
   }
-
-  @Get('/test2')
-  getTest2(): string {
-    return 'test2';
-  }
-
-  @Get('/canyou')
-  canYou(): string {
-    return 'yep';
-  }
-
-  @Get('/without')
-  withoutReload(): string {
-    return 'without reload app';
-  }
-
-  @Get('/head')
-  head(): string {
-    return 'head';
-  }
 }
