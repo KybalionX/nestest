@@ -29,4 +29,9 @@ export class AppController {
   withoutReload(): string {
     return 'without reload app';
   }
+
+  @Get('/head')
+  head(): string {
+    return 'head';
+  }
 }
