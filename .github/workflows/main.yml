@@ -1,0 +1,22 @@
+name: Running testing
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-deep: 0
+      uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Install dependencies
+        run: npm install
+      - name: Linting code
+        run: npm run lint
+      - name: Run build
+        run: npm run build
+      - name: Run test
+        run: npm run test
+      
