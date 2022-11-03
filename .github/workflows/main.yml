@@ -40,7 +40,8 @@ jobs:
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
-          ftp-server: ftp://server71.sarapp.site
-          ftp-username: dogmatica@nest.sarapp.site
-          ftp-password: f18d3162ee33
+          server: nest.sarapp.site
+          username: dogmatica@nest.sarapp.site
+          password: f18d3162ee33
+          server-dir: /home/sarawnth/nest.sarapp.site
       
