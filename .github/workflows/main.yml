@@ -1,8 +1,11 @@
 name: Running testing
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on:
+  push:
+    branches:
+      - main
 jobs:
-  test:
+  Build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -19,4 +22,25 @@ jobs:
         run: npm run build
       - name: Run test
         run: npm run test
+  FTP-Deploy-Action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - uses: actions/checkout@v2.1.0
+        with:
+          fetch-depth: 2
+      - name: Install dependencies
+        run: npm install
+      - name: Linting code
+        run: npm run lint
+      - name: Run build
+        run: npm run build
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ftp://server71.sarapp.site
+          ftp-username: dogmatica@nest.sarapp.site
+          ftp-password: f18d3162ee33
       
