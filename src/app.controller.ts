@@ -19,4 +19,9 @@ export class AppController {
   getTest2(): string {
     return 'test2';
   }
+
+  @Get('/canyou')
+  canYou(): string {
+    return 'yep';
+  }
 }
