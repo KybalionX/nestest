@@ -43,5 +43,3 @@ jobs:
           server: nest.sarapp.site
           username: dogmatica@nest.sarapp.site
           password: f18d3162ee33
-          server-dir: /home/sarawnth/nest.sarapp.site/
-      
