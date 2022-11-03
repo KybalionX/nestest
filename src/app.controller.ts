@@ -24,4 +24,9 @@ export class AppController {
   canYou(): string {
     return 'yep';
   }
+
+  @Get('/without')
+  withoutReload(): string {
+    return 'without reload app';
+  }
 }
