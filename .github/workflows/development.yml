@@ -1,4 +1,4 @@
-name: Running testing
+name: Running testing in development branch
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   pull_request:
